@@ -91,7 +91,7 @@ function cariMean(params){
 
 function cariMedian(params){
     let median = 0
-    if(params.length%2 == 0 ){
+    if(params.length%2 === 0 ){
         median = (params[(params.length/2)-1] + params[Math.ceil(params.length/2)])/2
     }else{
         median = (params[Math.ceil(params.length/2)])
@@ -105,7 +105,7 @@ function cariModus(params) {
     for(let i = 0; i<params.length; i++){
         let frekuensi = 0;
         for(let j = 0; j<params.length; j++){
-            if(params[i]===params[j] && i !==j){
+            if(params[i]===params[j] && i !== j){
                 frekuensi++;
                 if(frekuensi>frekuensiTerbanyak){
                     frekuensiTerbanyak=frekuensi;
@@ -120,7 +120,7 @@ function cariModus(params) {
 
 // Nomer 4
 function a(params){
-    return data.find(param => param.title = params).isBorrowed
+    return data.find(param => param.title === params).isBorrowed
 }
 
 function b(){
