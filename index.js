@@ -12,8 +12,8 @@ let arrayOfObject = [
         bod : "40 agustus"
     }
 ]
-
-console.log(arrayOfObject)
+let mapArray = arrayOfObject.map(mapItem =>mapItem)
+console.log(mapArray)
 console.log("\n")
 
 let objNew = {
@@ -25,7 +25,7 @@ arrayOfObject.push(objNew)
 console.log(arrayOfObject)
 console.log("\n")
 
-arrayOfObject.splice(2,1,{name:"aaaaa",b:"bbbbb"})
+arrayOfObject.splice(2,1,)
 console.log(arrayOfObject )
 console.log("\n")
 
