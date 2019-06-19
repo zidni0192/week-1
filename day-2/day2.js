@@ -77,7 +77,7 @@ function nomer2(params){
 
 // Nomer 3
 function nomer3(){
-    let nilai = [70,60,65,65,30,40]
+    let nilai = [70,70,60,66,65,30,40]
     nilai.sort()
     console.log('\nMean : '+cariMean(nilai))    
     console.log('\nMedian : '+cariMedian(nilai))    
@@ -92,9 +92,9 @@ function cariMean(params){
 function cariMedian(params){
     let median = 0
     if(params.length%2 === 0 ){
-        median = (params[(params.length/2)-1] + params[Math.ceil(params.length/2)])/2
+        median = (params[(params.length/2)-1] + params[params.length/2])/2
     }else{
-        median = (params[Math.ceil(params.length/2)])
+        median = (params[Math.ceil(params.length/2)-1])
     }    
     return median
 }
