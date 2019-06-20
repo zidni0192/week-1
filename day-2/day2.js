@@ -51,7 +51,7 @@ let data = [
 
 // Nomer 1
 function nomer1(params){
-    let dataArray = params.map(dataArrays => {return {...dataArrays}})
+    let dataArray = params.map(dataArrays => ({...dataArrays}))
 
     dataArray.find(dataArrays => dataArrays.name === 'Tatas').status = 'Merried'
     dataArray.find(dataArrays => dataArrays.name === 'Tatas').city = 'Jakarta'
