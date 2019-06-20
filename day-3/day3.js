@@ -3,8 +3,8 @@ let arr = ["nurse srun","makam","kasurrusak","ayam"]
 function polindrome(params){
     let arrBol = []
     for(a=0;a<params.length;a++){
-        let strReverse = params[a].replace(/\s+/g, '').split('').reverse().join('')
-        if(params[a].replace(/\s+/g, '') === strReverse){
+        let strReverse = params[a].replace(/\s/, '').split('').reverse().join('')
+        if(params[a].replace(/\s/, '') === strReverse){
             arrBol[a] = true
         }else{
             arrBol[a] = false
@@ -13,7 +13,7 @@ function polindrome(params){
     return arrBol
 }
 
-// // console.log(polindrome(arr))
+console.log(polindrome(arr))
 /// Nomor 1
 
 
@@ -52,7 +52,7 @@ function transpose(arr){
 
     for(var i = 0; i < arr.length; i++){
         for(var j = 0; j < arr[i].length; j++){
-            ret[j].push(array[i][j]);
+            ret[j].push(arr[i][j]);
         };
     };
 
