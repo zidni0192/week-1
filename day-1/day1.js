@@ -25,7 +25,7 @@ arrayOfObject.push(objNew)
 console.log(arrayOfObject)
 console.log("\n")
 
-arrayOfObject.splice(2,1,)
+arrayOfObject.splice(2,1)
 console.log(arrayOfObject )
 console.log("\n")
 
