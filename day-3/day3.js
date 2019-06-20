@@ -61,3 +61,33 @@ function transpose(arr){
 console.table(transpose(ay))
 
 // Nomor 3
+
+
+/// Nomor 4
+
+function multiplyMatrices(m1, m2) {
+    if(m1.length !== m2[0].length){
+        return "Sorry can't count. Because length of the first matrix field and the second Matrix row is not same "
+    }else{
+        var result = [];
+        for (var i = 0; i < m1.length; i++) {
+            result[i] = [];
+            for (var j = 0; j < m2[0].length; j++) {
+                var sum = 0;
+                for (var k = 0; k < m1[0].length; k++) {
+                    sum += m1[i][k] * m2[k][j];
+                }
+                result[i][j] = sum;
+            }
+        }
+        return result;
+    }
+}
+
+var m1 = [3,4,2]
+var m2 = [[7,5],[6,4]]
+
+var mResult = multiplyMatrices(m1, m2)
+
+
+console.table(mResult) 
