@@ -45,13 +45,13 @@ let ay = [[1,2,3],[4,5,6],[7,8,9]]
 // console.table(ret)
 
 function transpose(arr){
-    var ret = [];
-    for(var i = 0; i < arr.length; i++){
+    let ret = [];
+    for(let i = 0; i < arr.length; i++){
         ret.push([]);
     };
 
-    for(var i = 0; i < arr.length; i++){
-        for(var j = 0; j < arr[i].length; j++){
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
             ret[j].push(arr[i][j]);
         };
     };
@@ -69,12 +69,12 @@ function multiplyMatrices(m1, m2) {
     if(m1.length !== m2[0].length){
         return "Sorry can't count. Because length of the first matrix field and the second Matrix row is not same "
     }else{
-        var result = [];
-        for (var i = 0; i < m1.length; i++) {
+        let result = [];
+        for (let i = 0; i < m1.length; i++) {
             result[i] = [];
-            for (var j = 0; j < m2[0].length; j++) {
-                var sum = 0;
-                for (var k = 0; k < m1[0].length; k++) {
+            for (let j = 0; j < m2[0].length; j++) {
+                let sum = 0;
+                for (let k = 0; k < m1[0].length; k++) {
                     sum += m1[i][k] * m2[k][j];
                 }
                 result[i][j] = sum;
@@ -84,10 +84,10 @@ function multiplyMatrices(m1, m2) {
     }
 }
 
-var m1 = [3,4,2]
-var m2 = [[7,5],[6,4]]
+let m1 = [3,4,2]
+let m2 = [[7,5],[6,4]]
 
-var mResult = multiplyMatrices(m1, m2)
+let mResult = multiplyMatrices(m1, m2)
 
 
 console.table(mResult) 
