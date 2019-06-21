@@ -21,7 +21,11 @@ console.log(polindrome(arr))
 /// Nomor 2
 let hasill
 function tambah(params){
-    let hasil = params.reduce((tambah , current ) => tambah + current)
+    // let hasil = params.reduce((tambah , current ) => tambah + current)
+    let hasil = 0
+    for(zz = 0;zz<params.length;zz++){
+        hasil +=params[zz]
+    }
     hasil = hasil.toString().split('')
     for(a=0;a<hasil.length;a++){
         hasil[a]=Number(hasil[a])
@@ -62,32 +66,3 @@ console.table(transpose(ay))
 
 // Nomor 3
 
-
-/// Nomor 4
-
-function multiplyMatrices(m1, m2) {
-    if(m1.length !== m2[0].length){
-        return "Sorry can't count. Because length of the first matrix field and the second Matrix row is not same "
-    }else{
-        let result = [];
-        for (let i = 0; i < m1.length; i++) {
-            result[i] = [];
-            for (let j = 0; j < m2[0].length; j++) {
-                let sum = 0;
-                for (let k = 0; k < m1[0].length; k++) {
-                    sum += m1[i][k] * m2[k][j];
-                }
-                result[i][j] = sum;
-            }
-        }
-        return result;
-    }
-}
-
-let m1 = [3,4,2]
-let m2 = [[7,5],[6,4]]
-
-let mResult = multiplyMatrices(m1, m2)
-
-
-console.table(mResult) 
